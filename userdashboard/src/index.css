@@ -1,0 +1,216 @@
+/* Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 0;
+  min-height: 100vh;
+  background-image: url('space.gif'); /* Replace with the actual path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #E0E0E0; /* Light text color for contrast */
+}
+
+/* Main Container Styling */
+.container {
+  max-width: 800px;
+  width: 100%;
+  background: rgba(10, 10, 30, 0.7); /* Dark background for contrast */
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #00BFFF; /* Electric blue for pop */
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Search and Sort Inputs */
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  background: rgba(30, 30, 50, 0.7);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+input:focus, select:focus {
+  outline: none;
+  box-shadow: 0 4px 16px rgba(0, 191, 255, 0.4); /* Electric blue glow */
+}
+
+/* User List and Cards */
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.user-card {
+  background: rgba(20, 20, 40, 0.5); /* Dark, semi-transparent background */
+  border: 1px solid rgba(0, 191, 255, 0.4); /* Blue border for focus */
+  padding: 20px;
+  flex: 1 1 250px;
+  position: relative;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.user-card h3 {
+  color: #1E90FF; /* Lighter blue */
+  font-size: 1.2em;
+}
+
+.user-card p {
+  color: #B0C4DE; /* Soft gray-blue text */
+  opacity: 0.85;
+}
+
+/* Hover effect */
+.user-card:hover {
+  transform: scale(1.05);
+  background: rgba(25, 25, 50, 0.6); /* Slightly brighter for contrast */
+}
+
+.user-card .view-details {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #00BFFF; /* Electric blue button */
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.user-card:hover .view-details {
+  display: block;
+}
+
+/* Modal Styling */
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: rgba(15, 15, 35, 0.9); /* Dark background with blur */
+  padding: 25px;
+  border-radius: 12px;
+  width: 350px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+}
+
+.modal h2 {
+  color: #00BFFF; /* Electric blue */
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.modal p {
+  color: #B0C4DE;
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #00BFFF;
+  font-weight: bold;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 600px) {
+  .user-list {
+      flex-direction: column;
+      gap: 12px;
+  }
+}
+/*.user-card .view-details {
+  display: none;
+}
+
+.user-card:hover .view-details {
+  display: block;
+}*/
+/* Modal Styling */
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: rgba(15, 15, 35, 0.9); /* Dark background with blur */
+  padding: 25px;
+  border-radius: 12px;
+  width: 350px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+}
+
+.modal h2 {
+  color: #00BFFF; /* Electric blue */
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.modal p {
+  color: #B0C4DE;
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #00BFFF;
+  font-weight: bold;
+}
+
+
