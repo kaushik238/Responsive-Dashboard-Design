@@ -1,5 +1,3 @@
-Here's a combined README file that integrates the features of both your User Dashboard app built with React and the original structure you provided. This README is tailored for a React-based responsive user dashboard application:
-
 ---
 
 # Responsive User Dashboard
